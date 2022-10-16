@@ -34,6 +34,7 @@ resource "shell_script" "flux_sync" {
   }
 
   environment = {
+    CLUSTER_LOCAL_PATH = var.target_path
     CLUSTER_LOCAL_NAME = "kind-${kind_cluster.cluster_local.name}"
     CLUSTER_LOCAL_GITHUB_OWNER = var.github_owner
     CLUSTER_LOCAL_GITHUB_REPOSITORY = var.repository_name

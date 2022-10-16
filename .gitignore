@@ -1,6 +1,7 @@
 terraform/cluster-local-config
 *.tfstate
 terraform.tfstate.backup
+.terraform.tfstate.lock.info
 .terraform
 .terraform.lock.hcl
 *.tfvars
