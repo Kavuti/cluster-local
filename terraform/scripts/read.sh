@@ -1,0 +1,1 @@
+flux check --context=$CLUSTER_LOCAL_NAME
