@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 5m
   install:
-        timeout: 10m
+    timeout: 10m
   chart:
     spec:
       chart: prometheus-community/prometheus
@@ -14,7 +14,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-        namespace: flux-system
+        namespace: monitoring
       interval: 1m
   valuesFrom:
     - kind: ConfigMap
