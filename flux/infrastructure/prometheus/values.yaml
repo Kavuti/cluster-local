@@ -125,7 +125,8 @@ alertmanager:
 
     ## alertmanager Ingress annotations
     ##
-    annotations: {}
+    annotations: 
+      nginx.ingress.kubernetes.io/rewrite-target: /
       # kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
@@ -831,7 +832,8 @@ server:
 
     ## Prometheus server Ingress annotations
     ##
-    annotations: {}
+    annotations: 
+      nginx.ingress.kubernetes.io/rewrite-target: /
       # kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
@@ -849,7 +851,7 @@ server:
     path: /prometheus
 
     # pathType is only for k8s >= 1.18
-    pathType: Prefix
+    pathType: ImplementationSpecific
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     extraPaths: []
