@@ -126,7 +126,7 @@ alertmanager:
     ## alertmanager Ingress annotations
     ##
     annotations: 
-      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/rewrite-target: /$2
       # kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
@@ -141,7 +141,7 @@ alertmanager:
     #   - alertmanager.domain.com
       - localhost
 
-    path: /alertmanager
+    path: /alertmanager(/|$)(.*)
 
     # pathType is only for k8s >= 1.18
     pathType: ImplementationSpecific
@@ -833,7 +833,7 @@ server:
     ## Prometheus server Ingress annotations
     ##
     annotations: 
-      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/rewrite-target: /$2
       # kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
@@ -848,7 +848,7 @@ server:
     #   - prometheus.domain.com
       - localhost
 
-    path: /prometheus
+    path: /prometheus(/|$)(.*)
 
     # pathType is only for k8s >= 1.18
     pathType: ImplementationSpecific
