@@ -138,7 +138,7 @@ alertmanager:
     ##
     hosts:
     #   - alertmanager.domain.com
-      - kubernetes.docker.internal
+      - localhost
 
     path: /alertmanager
 
@@ -844,7 +844,7 @@ server:
     ##
     hosts: 
     #   - prometheus.domain.com
-      - kubernetes.docker.internal
+      - localhost
 
     path: /prometheus
 
