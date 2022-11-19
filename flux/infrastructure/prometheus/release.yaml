@@ -9,7 +9,7 @@ spec:
     timeout: 10m
   chart:
     spec:
-      chart: prometheus-community/prometheus
+      chart: prometheus
       version: 15.18.0 
       sourceRef:
         kind: HelmRepository
