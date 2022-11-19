@@ -138,9 +138,9 @@ alertmanager:
     ##
     hosts:
     #   - alertmanager.domain.com
-      - cluster.local/alertmanager
+      - kubernetes.docker.internal
 
-    path: /
+    path: /alertmanager
 
     # pathType is only for k8s >= 1.18
     pathType: ImplementationSpecific
@@ -844,9 +844,9 @@ server:
     ##
     hosts: 
     #   - prometheus.domain.com
-      - cluster.local/prometheus
+      - kubernetes.docker.internal
 
-    path: /
+    path: /prometheus
 
     # pathType is only for k8s >= 1.18
     pathType: Prefix
@@ -1219,7 +1219,7 @@ pushgateway:
 
     ## pushgateway Ingress annotations
     ##
-    annotations: {} 
+    annotations: {}
     #   kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
