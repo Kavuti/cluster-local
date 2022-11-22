@@ -9,10 +9,13 @@ spec:
     timeout: 10m
     remediation:
       retries: 3
+    crds: Create
+  upgrade:
+    crds: CreateReplace
   chart:
     spec:
-      chart: prometheus
-      version: 15.18.0 
+      chart: kube-prometheus-stack
+      version: "41.x"
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
