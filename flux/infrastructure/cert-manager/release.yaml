@@ -15,11 +15,11 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      version: "41.x"
+      version: "1.x"
       sourceRef:
         kind: HelmRepository
         name: cert-manager
-        namespace: monitoring
+        namespace: cert-manager
       interval: 1m
   valuesFrom:
     - kind: ConfigMap
