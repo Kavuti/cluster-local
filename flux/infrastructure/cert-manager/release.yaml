@@ -1,8 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: prometheus-community
-  namespace: monitoring
+  name: cert-manager
+  namespace: cert-manager
 spec:
   interval: 5m
   install:
@@ -18,7 +18,7 @@ spec:
       version: "41.x"
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community
+        name: cert-manager
         namespace: monitoring
       interval: 1m
   valuesFrom:
