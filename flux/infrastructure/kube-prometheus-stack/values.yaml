@@ -263,7 +263,7 @@ alertmanager:
     ## Hosts must be provided if Ingress is enabled.
     ##
     hosts:
-      - alertmanager.vcap.me
+      - alertmanager.cluster.local
 
     ## Paths to use for ingress rules - one path should match the alertmanagerSpec.routePrefix
     ##
@@ -762,7 +762,7 @@ grafana:
     # hosts:
     #   - grafana.domain.com
     hosts:
-      - grafana.vcap.me
+      - grafana.cluster.local
 
     ## Path for grafana ingress
     path: /
